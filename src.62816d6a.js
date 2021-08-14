@@ -4,7 +4,9 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=o;const e=e=>new Promise((t,o)=>{setTimeout(()=>{t(e)},e)}),t=e=>console.log(`Resolved after ${e}ms`);function o(){e(2e3).then(t),e(1e3).then(t),e(1500).then(t)}
 },{}],"n9ff":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=n;const e=[{name:"Mango",active:!0},{name:"Poly",active:!1},{name:"Ajax",active:!0},{name:"Lux",active:!1}],a=(e,a)=>new Promise((t,n)=>{t(e.map(e=>e.name===a?{...e,active:!e.active}:e))}),t=e=>console.table(e);function n(){a(e,"Mango").then(t),a(e,"Lux").then(t)}
+},{}],"T9OW":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=a;const t=(t,e)=>Math.floor(Math.random()*(e-t+1)+t),e=e=>{const n=t(200,500);return new Promise((t,o)=>{const a=Math.random()>.3;setTimeout(()=>{a?t({id:e.id,time:n}):o(e.id)},n)})},n=({id:t,time:e})=>{console.log(`Transaction ${t} processed in ${e}ms`)},o=t=>{console.warn(`Error processing transaction ${t}. Please try again later.`)};function a(){e({id:70,amount:150}).then(n).catch(o),e({id:71,amount:230}).then(n).catch(o),e({id:72,amount:75}).then(n).catch(o),e({id:73,amount:100}).then(n).catch(o)}
 },{}],"Focm":[function(require,module,exports) {
-"use strict";require("./sass/main.scss");var e=r(require("./js/task1")),s=r(require("./js/task2"));function r(e){return e&&e.__esModule?e:{default:e}}(0,e.default)(),(0,s.default)();
-},{"./sass/main.scss":"clu1","./js/task1":"u2QS","./js/task2":"n9ff"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-promisification/src.182e38e1.js.map
+"use strict";require("./sass/main.scss");var e=u(require("./js/task1")),s=u(require("./js/task2")),r=u(require("./js/task3"));function u(e){return e&&e.__esModule?e:{default:e}}(0,e.default)(),(0,s.default)(),(0,r.default)();
+},{"./sass/main.scss":"clu1","./js/task1":"u2QS","./js/task2":"n9ff","./js/task3":"T9OW"}]},{},["Focm"], null)
+//# sourceMappingURL=/goit-js-hw-11-promisification/src.62816d6a.js.map
